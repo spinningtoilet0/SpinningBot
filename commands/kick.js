@@ -1,7 +1,6 @@
 module.exports = {
 	name: 'kick',
 	description: 'Tag a member and kick them.',
-	guildOnly: true,
 	execute(message) {
 		if (message.member.hasPermission('ADMINISTRATOR')) {
 			if (!message.mentions.users.size) {
