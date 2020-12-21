@@ -1,4 +1,6 @@
 {
 	"prefix": "sb.",
 	"token": "your-token-here"
+	"muteRoleToFind": "Muted",
+	"bannedRoleToFind": "Clown"
 }
