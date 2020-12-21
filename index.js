@@ -22,6 +22,8 @@ client.on('message', message => {
 		return;
 	}
 
+	if (message.channel.type == "dm") return;
+
 	console.log(message.member.user.tag + ' said: ' + message.content);
 	
 	if (!message.content.startsWith(prefix)) {
@@ -45,11 +47,6 @@ client.on('message', message => {
 		return;
 	}
 
-	if (command.guildOnly && message.channel.type === 'dm') {
-		console.log('no ' + commandName + ' in dms');
-		return message.reply('I can\'t execute that command inside DMs!');
-	}
-
 	if (command.args && !args.length) {
 		console.log('no args');
 		let reply = `You didn't provide any arguments, ${message.author}!`;
@@ -59,8 +56,8 @@ client.on('message', message => {
 			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
 		}
 
-		return message.channel.send(reply);
 		console.log('sent reply');
+		return message.channel.send(reply);
 	}
 });
 
