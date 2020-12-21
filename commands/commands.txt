@@ -1,0 +1,3 @@
+args-info, avatar, ban, beep, clear, help, kick, mute, ping, reload, roleban, server, tempmute, temproleban, unmute, unroleban, user-info
+
+You can send sb.help [command name] to get info on a specific command!
